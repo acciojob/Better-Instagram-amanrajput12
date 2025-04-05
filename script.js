@@ -1,14 +1,14 @@
 //your code here
-// Assign IDs to each image div
+
 document.querySelectorAll(".image").forEach((value, i) => {
     value.setAttribute("id", `div${i + 1}`);
 });
 
 let draggedElement = null;
 
-// Add drag events
+
 document.querySelectorAll(".image").forEach(image => {
-    // Drag start
+
     image.addEventListener("dragstart", (e) => {
         draggedElement = e.target;
         // e.target.classList.add("dragging");
@@ -45,11 +45,11 @@ document.querySelectorAll(".image").forEach(image => {
         draggedElement.style.backgroundImage =targetBg;
         draggedElement.innerHTML=targetvalue;
      
-        draggedElement.id=targetId
+        // draggedElement.id=targetId
 
         e.target.style.backgroundImage =draggedBg;
         e.target.innerHTML=draggedvalue;
      
-        e.target.id=draggedId;
+        // e.target.id=draggedId;
     });
 });
